@@ -1,38 +1,198 @@
+
 .App {
+  border: 5px solid navy;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content; 
+  height: fit-content; 
+  margin: 20px; 
+  padding: 5px;
+}
+
+
+.header{
+  border: 2px solid skyblue;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  border: 3px solid red;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  border: 2px solid rgb(219, 50, 50);
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.employeePage .employeeContainer{
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  height: 100px;
+  display: flex;
+  padding: 10px 0;
+  padding-left: 20px;
+}
+.employeePage .employeeContainer .right{
+  margin-left: 30px;
+  margin-top: 20px
+}
+.employeePage .employeeContainer .name{
+  font-size: 1.3em;
+}
+
+.employeePage img {
+  height: 100px;
+  width: 100px;
+}
+
+.contactInfo{
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  letter-spacing: normal !important;
+}
+
+.employeeInfo:first-child{
+  background-color: yellow;
+}
+
+.contactInfo *{
+  margin: 0 10px;
+}
+
+.employeePage .left > *{
+  /* border: 1px solid lime; */
+  margin: 2px 10px
+}
+
+.contactNumber{
+  color: grey;
+  font-size: .8em;
+}
+
+.employeePage .right .arrow{
+  /* border: 1px solid yellow; */
+  font-weight: bold;
+  color: grey;
+  font-size: 1.5em;
+}
+
+/* --------------- Employee------------------------------- */
+
+.employeeList{
+  border: 3px solid greenyellow;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.employeeList::-webkit-scrollbar{
+  display: none; 
+
+}
+
+/*------------------------ employeelistitem -------------*/
+
+
+.employeeItem{
+  border: 3px solid orange;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2px;
+  height: 75px;
+  cursor: pointer;
+  
+}
+.employeeItem:hover{
+  background-color: rgb(220, 183, 114);
+}
+
+.employeeItem .empItemL{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.employeeItem .empItemR {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+
+}
+
+.name{
+  color:black;
+  font-size: 18px;
+}
+
+.position{
+  color: gray;
+  font-size: 14px;
+}
+
+/* ------------------employee page--------------------- */
+.employeePage{
+  border: 3px solid purple;
+  width: 400px;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.page{
+  border: 3px solid pink;
+  width: 500px;
+  padding: 5px;
+}
+
+.page > * , .employeePage > *{
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.employeeInfo {
+  border: 2px solid salmon;
+  margin: 10px;
+}
+.employeeInfo > *:hover{
+  background-color: lightgray;
+}
+
+
+.infos{
+  color: salmon;
+  font-size: 30px;
+  text-align: left;
+  margin-left: -135px;
+}
+
+.infos:hover{
+  cursor: pointer;
+
 }

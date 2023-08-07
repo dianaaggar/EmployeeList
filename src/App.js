@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import {useContext} from 'react';
 import './App.css';
 
+import {AppContext} from './contexts/app_context';
+import HomePage from './components/HomePage';
+import EmployeePage from './components/EmployeePage';
+
 function App() {
+
+  let {showEmployee} = useContext(AppContext)
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <HomePage />
+      {showEmployee && <EmployeePage /> }
+
     </div>
   );
 }
